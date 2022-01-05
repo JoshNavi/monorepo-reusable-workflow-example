@@ -1,0 +1,22 @@
+name: Build
+
+on:
+  workflow_call:
+    inputs:
+      name:
+        required: true
+        description: The name of the package to build
+        type: string
+
+jobs:
+  build:
+    name: Build ${{ inputs.name }}
+    runs-on: ubuntu-latest
+    steps:
+      - id: step-1
+        run: echo "$NAME"
+        env:
+          NAME: ${{ inputs.name }}
+
+      - id: step-2
+        run: echo "done"

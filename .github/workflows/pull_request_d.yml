@@ -1,0 +1,12 @@
+name: Build D on Pull Request
+
+on:
+  pull_request:
+    paths:
+      - 'package-d/**'
+
+jobs:
+  call-workflow:
+    uses: ./.github/workflows/build.yml
+    with:
+      name: 'package-d'

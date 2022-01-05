@@ -1,0 +1,12 @@
+name: Build A on Pull Request
+
+on:
+  pull_request:
+    paths:
+      - 'package-a/**'
+
+jobs:
+  call-workflow:
+    uses: ./.github/workflows/build.yml
+    with:
+      name: 'package-a'
