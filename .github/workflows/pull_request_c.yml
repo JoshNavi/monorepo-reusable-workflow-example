@@ -7,6 +7,6 @@ on:
 
 jobs:
   call-workflow:
-    uses: ./.github/workflows/build.yml@main
+    uses: JoshNavi/monorepo-reusable-workflow-example/.github/workflows/build.yml@main
     with:
       name: 'package-c'
